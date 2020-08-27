@@ -8,10 +8,9 @@
     "client": "cd client && yarn start",
     "server": "nodemon --ignore 'client/' server",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start": "concurrently --kill-others-on-fail \"node server/server -p $PORT\" \"yarn client -p $PORT\" ",
+    "start": "concurrently --kill-others-on-fail \"node server/server -p $PORT\" \"yarn client\" ",
     "storybook": "cd client && yarn storybook",
-    "postinstall": "yarn install && cd server && yarn install && cd ../client && yarn install",
-    "heroku-postbuild": "cd client && yarn install --production=false && yarn run build"
+    "heroku-postbuild": "yarn install && cd client && yarn install --production=false && yarn build"
   },
   "author": "",
   "license": "ISC",
