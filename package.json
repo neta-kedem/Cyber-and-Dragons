@@ -6,11 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && yarn start",
-    "client-build": "cd client && yarn build && yarn start -p $PORT",
     "server": "nodemon --ignore 'client/' server",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start": "concurrently --kill-others-on-fail \"node server/server -p $PORT\" \"yarn client-build -p $PORT\" ",
-    "storybook": "cd client && yarn storybook"
+    "start": "concurrently --kill-others-on-fail \"node server/server -p $PORT\" \"yarn client -p $PORT\" ",
+    "storybook": "cd client && yarn storybook",
+    "postinstall": "yarn install && cd server && yarn install && cd ../client && yarn install",
+    "heroku-postbuild": "cd client && yarn install --production=false && yarn run build"
   },
   "author": "",
   "license": "ISC",
