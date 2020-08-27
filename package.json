@@ -6,9 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && yarn start",
+    "client-build": "cd client && yarn build && yarn start",
     "server": "nodemon --ignore 'client/' server",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start": "concurrently --kill-others-on-fail \"node server/server -p $PORT\" \"yarn client -p $PORT\" ",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client-build\"",
+    "start": "concurrently --kill-others-on-fail \"node server/server -p $PORT\" \"yarn client-build -p $PORT\" ",
     "storybook": "cd client && yarn storybook"
   },
   "author": "",
