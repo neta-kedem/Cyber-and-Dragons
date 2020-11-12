@@ -24,3 +24,6 @@ yarn-error.log*
 
 # IDE
 .idea
+/client/.storybook/
+/client/storybook-static/
+/client/public/
