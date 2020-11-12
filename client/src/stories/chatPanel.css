@@ -1,0 +1,20 @@
+.chatPanel {
+  display: grid;
+  grid-template-areas: "a a b b b b";
+}
+
+.chatTabs {
+  margin-right: -27px;
+}
+.playerName {
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+}
+
+.messageBoard {
+  background-color: #413d4e;
+  color: white;
+  width: 200px;
+  height: 500px;
+  border-left: 4px solid black;
+}

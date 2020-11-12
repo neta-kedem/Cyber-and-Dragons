@@ -5,14 +5,11 @@ import {ChatPanel} from "./chatPanel";
 export default {
   title: 'Chat Panel',
   component: ChatPanel,
+  argTypes: {
+    currUser: {defaultValue: {"characterName":"T'k","id":"111","avatar":"t1e","isDM":false,"playerName":"Neta"}},
+  }
 };
 
 const Template = (args) => <ChatPanel {...args} />;
 
-export const LoggedIn = Template.bind({});
-LoggedIn.args = {
-  user: {},
-};
-
-export const LoggedOut = Template.bind({});
-LoggedOut.args = {};
+export const chatPanel = Template.bind({});

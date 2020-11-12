@@ -1,28 +1,27 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './header.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import "./chatPanel.css"
+import {ChatTab} from "./chatTab"
 
-export const ChatPanel = ({ user, users, onLogin, onLogout, onCreateAccount }) => (
-  <div className="wrapper">
-    <div>
+export const ChatPanel = ({ currUser, users, activeChatTab }) => (
+  <div className="chatPanel">
+    <div className="chatTabs">
       {
-        users.map(user => {
-          return <div key={user.id}>{user.userName}</div>
+        users.map(talkToUser => {
+          return <ChatTab key={talkToUser.id} talkToUser={talkToUser} isActive={talkToUser.isActive} messages={[]}/>
         })
       }
     </div>
+    <div className="messageBoard"></div>
   </div>
 );
 
 ChatPanel.propTypes = {
-  user: PropTypes.shape({}),
+  currUser: PropTypes.shape({}),
   users: PropTypes.arrayOf(PropTypes.shape({userName: PropTypes.string})).isRequired,
-  onLogin: PropTypes.func.isRequired,
-  onLogout: PropTypes.func.isRequired,
-  onCreateAccount: PropTypes.func.isRequired,
+  activeChatTab: PropTypes.string
 };
 
 ChatPanel.defaultProps = {
-  user: null,
-  users: [{"userName":"1o","id":"o6n","avatar":"t1e","isDM":true,"playerName":"ho9"},{"userName":"ebr","id":"stf","avatar":"jmv","isDM":false,"playerName":"3bp"},{"userName":"38s","id":"g5c","avatar":"qu","isDM":false,"playerName":"j9"}]
+  users: [{"characterName":"TC","id":"o6n","avatar":"t1e","isDM":true,"playerName":"first", "isActive": true},{"characterName":"GM","id":"stf","avatar":"jmv","isDM":false,"playerName":"second"},{"characterName":"YY","id":"g5c","avatar":"qu","isDM":false,"playerName":"third"}]
 };
