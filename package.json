@@ -10,7 +10,6 @@
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "start": "concurrently --kill-others-on-fail \"node server -p $PORT\" \"yarn client\" ",
     "storybook": "cd client && yarn storybook",
-    "build-storybook": "cd client && yarn build-storybook",
     "heroku-postbuild": "yarn install && cd server && yarn install && cd ../client && yarn install --production=false && yarn build"
   },
   "author": "",

@@ -1,11 +1,12 @@
 .chatPanel {
-  display: grid;
-  grid-template-areas: "a a b b b b";
+  display: flex;
 }
 
 .chatTabs {
-  margin-right: -27px;
+  width: fit-content;
+  margin-right: -4px;
 }
+
 .playerName {
   font-weight: bold;
   -webkit-text-stroke: 1px black;
