@@ -1,7 +1,11 @@
-const express = require("express");
-const app = express();
-const port = process.env.PORT || 3003;
-const path = require("path");
+import dotenv from "dotenv"
+dotenv.config()
+import express from "express"
+const app = express()
+const port = process.env.PORT || 3003
+import path from "path"
+const {env} = process
+
 //
 // app.get('/', (req, res) => {
 //     res.send('Hello World!')

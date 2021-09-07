@@ -15,10 +15,9 @@ The hero will be born battle ready, with a quick and automatic CI/CD process.
 `git clone https://github.com/[your-user-name]/Cyber-and-Dragons`
 <br>If you were presumptuous and cloned from my user instead of forking, fork it, and use this link https://docs.github.com/en/github/using-git/changing-a-remotes-url to change the git remote url
 3. ``yarn install``. if you do not have yarn installed, first install yarn 0_O
-4. ``yarn dev`` will run the website on http://localhost:3000/ (and server on http://localhost:3003/)
-<br>``yarn storybook`` will run storybook on http://localhost:6006/
-<br> Choose Wisely
-5. When you want ot offer your empowerment to that masterpiece, commit and push to your repo, and then add a Pull Request
+4. The chosen book of knowledge is prisma over postgres. use ``yarn prisma push`` to cast a spell to gain the schema knowledge. You must cast it over a well-prepared raw postgres  
+5. ``yarn dev`` will run the website on http://localhost:3000/ (and server on http://localhost:3003/)
+6. When you want ot offer your empowerment to that masterpiece, commit and push to your repo, and then add a Pull Request
 <br> Wait, but what's a PR??? https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request
 <br> I will review it and give my remarks. When it's ready I will merge it, and it will be automatically deployed to a heroku hosted domain on [add address later]
 
