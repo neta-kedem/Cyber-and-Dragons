@@ -9,7 +9,7 @@
     "server": "nodemon --ignore 'client/' server",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "start": "concurrently --kill-others-on-fail \"node server -p $PORT\" \"yarn client\" ",
-    "heroku-postbuild": "yarn install && cd server && yarn install && cd ../client && yarn install --production=false && yarn build"
+    "heroku-postbuild": "yarn install && cd server && yarn install && yarn build && cd ../client && yarn install --production=false && yarn build"
   },
   "author": "",
   "license": "ISC",
