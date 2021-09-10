@@ -1,12 +1,12 @@
-import dotenv from "dotenv"
-dotenv.config()
-import express from "express"
-const app = express()
-const port = process.env.PORT || 3003
-import path from "path"
+import dotenv from "dotenv";
+import express from "express";
+import path from "path";
+
+dotenv.config();
+const app = express();
+const port = process.env.PORT || 3003;
 
 app.use(express.static(path.join(__dirname, "../../client/build")));
-
 app.get("/api/*", (req, res) => {
   res.send("Hello World!");
 });
